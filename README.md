@@ -28,7 +28,7 @@ ssh someinternalhost
 
 ##Дополнительное задание №2
 #Использование сервиса nip.io и встроенного в "Pritunl" Let's Encrypt
-#Регистрируем запись в npo.io:
+#Регистрируем запись в nip.io:
 curl -vvv bastion.<ip>.nip.io
 
 Далее в панели управления "Pritunl" переходи в раздел "Settings" и вносим в поле "Lets Encrypt Domain" ранее зарегистрированное DN, после чего созраняем настройку.
