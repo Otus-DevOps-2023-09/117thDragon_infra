@@ -31,10 +31,17 @@ Host someinternalhost
 ssh -J bastion someinternalhost
 or
 ssh someinternalhost
+<<<<<<< HEAD
 ```
 ## Дополнительное задание №2
 4. Использование сервиса `npo.io` и встроенного в `Pritunl` Let's Encrypt. Регистрируем запись в `npo.io`:
 ```
+=======
+
+##Дополнительное задание №2
+#Использование сервиса nip.io и встроенного в "Pritunl" Let's Encrypt
+#Регистрируем запись в npo.io:
+>>>>>>> 06e91ea (Update README.md)
 curl -vvv bastion.<ip>.nip.io
 ```
 5. Далее в панели управления `Pritunl` переходи в раздел `Settings` и вносим в поле `Lets Encrypt Domain` ранее зарегистрированное DN, после чего созраняем настройку. Сертификат будет выпущен и автоматически установлен для работы для работы web-интерфейса по протоколу `https`. `p.s`. На момент выполнения работы, сервер `Let's Encrypt` отказывался выпускать сертификат по причине: `Error creating new order :: too many certificates already issued for \"nip.io\`.
