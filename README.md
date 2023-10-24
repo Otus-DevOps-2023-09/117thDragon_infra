@@ -27,7 +27,7 @@ or
 ssh someinternalhost
 
 ##Дополнительное задание №2
-#Использование сервиса npo.io и встроенного в "Pritunl" Let's Encrypt
+#Использование сервиса nip.io и встроенного в "Pritunl" Let's Encrypt
 #Регистрируем запись в npo.io:
 curl -vvv bastion.<ip>.nip.io
 
