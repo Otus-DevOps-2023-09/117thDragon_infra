@@ -36,8 +36,11 @@ curl -vvv bastion.<ip>.nip.io
 p.s. На момент выполнения работы, сервер Let's Encrypt отказывался выпускать сертификат по причине: "Error creating new order :: too many certificates already issued for \"nip.io\".
 
 ###HW №4###
-testapp_IP = 158.160.49.147
+testapp_IP = 158.160.124.82
 testapp_port = 9292
+
+#Доступ к приложению
+http://158.160.124.82:9292/
 
 ##Дополнительное задание №1
 startup_script.sh - shell-скрипт создания инстанса
