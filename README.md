@@ -36,11 +36,21 @@ curl -vvv bastion.<ip>.nip.io
 p.s. На момент выполнения работы, сервер Let's Encrypt отказывался выпускать сертификат по причине: "Error creating new order :: too many certificates already issued for \"nip.io\".
 
 ###HW №4###
-testapp_IP = 158.160.126.121
+testapp_IP = 158.160.111.4
 testapp_port = 9292
 
+#Создание инстанса
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata-from-file user-data=metadata.yaml \
+  --metadata serial-port-enable=1
+
 #Доступ к приложению
-http://158.160.126.121:9292/
+http://158.160.111.4:9292/
 
 ##Дополнительное задание №1
 startup_script.sh - shell-скрипт создания инстанса
