@@ -8,20 +8,12 @@ users:
     ssh_authorized_keys:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCaxRF9+4AAxAyhz6yE7riFxZyx4j+f5emRxDXw9+DzQMa0q8xp9ic6a55eYGKnNdyexn3NXQ31FDghbRw1SvzjdQeKWRDwUWA1GMcqMIApG5ogcG2cLk9igaaIrT0drJrjj9iShAvifc3ufOzCjNogao5t4U9r81twnwcPQlK6hIk/5GFhwe+JDyFTEyxYEZPR0NWlN/2frboQrRDCjKm4ttESRZUaYKz/gRzE/XSkL3JHv3eWMxrSNvYzWTeLWKE64ufG+QX7UC2Dr2t/NfOrXCU3X+g5ho70rWGY7Bv5lW+Q98Kvbbroln4MSbnPxVn/SaWE20eZX+P+Np4npOlgIdV+xhtKRUNYtFKHOAS7GB6TfY/4Jsbr2F3KVlPAi7O+Yk7AAIuNLdmdbbwiHOG5Ff94zikyyUQ3sIZhpgZU4nqfTx4yV1jbXDcu7SIqM0zhwf8+9cCK1JV1L7JAJpWV5ZbCb+NXRyQyupTQcGYE0JQ/UF9TsIicfPUlM1+u1PM= appuser"
 
-package_update: true
-
-packages:
-  - ruby-full
-  - ruby-bundler
-  - build-essential
-  - mongodb
-  - git
-
 write_files:
   - path: /home/yc-user/startup_script.sh
     permissions: "755"
     content: |
         #!/bin/bash
+        sudo apt update && sudo apt install -y git ruby-full ruby-bundler build-essential
         sudo systemctl enable mongodb
         sudo systemctl start mongodb
         sudo git clone -b monolith https://github.com/express42/reddit.git
