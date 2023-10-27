@@ -1,4 +1,4 @@
-51.250.79.148# 117thDragon_infra
+158.160.111.451.250.79.148# 117thDragon_infra
 117thDragon Infra repository
 
 ###HW №3###
@@ -36,7 +36,7 @@ curl -vvv bastion.<ip>.nip.io
 p.s. На момент выполнения работы, сервер Let's Encrypt отказывался выпускать сертификат по причине: "Error creating new order :: too many certificates already issued for \"nip.io\".
 
 ###HW №4###
-testapp_IP = 158.160.111.4
+testapp_IP = 51.250.91.149
 testapp_port = 9292
 
 #Создание инстанса
@@ -50,7 +50,7 @@ yc compute instance create \
   --metadata serial-port-enable=1
 
 #Доступ к приложению
-http://158.160.111.4:9292/
+http://51.250.91.149:9292/
 
 ##Дополнительное задание №1
 startup_script.sh - shell-скрипт создания инстанса

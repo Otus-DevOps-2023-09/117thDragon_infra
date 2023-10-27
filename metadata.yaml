@@ -24,8 +24,9 @@ write_files:
     permissions: "755"
     content: |
         #!/bin/bash
-        sudo systemctl enable mongodb
+        sleep 10
         sudo systemctl start mongodb
+        sudo systemctl enable mongodb
         sudo git clone -b monolith https://github.com/express42/reddit.git
         cd reddit && bundle install
         puma -d
