@@ -9,5 +9,5 @@ yc compute instance create \
   --core-fraction 50 \
   --create-boot-disk image-folder-id=${folder_id},image-family=reddit-full,size=10GB \
   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
-  --metadata-from-file user-data=metadata_1.yaml \
+  --metadata-from-file user-data=metadata_reddit.yaml \
   --metadata serial-port-enable=1 \
