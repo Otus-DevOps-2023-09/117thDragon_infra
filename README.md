@@ -153,3 +153,63 @@ packer build ubuntu16.json
 ## Дополнительное задание:
 1. Создан шаблон `packer` `immutable.json`, который используется для создания `bake-образа`.
 2. Создан скрипт `create-reddit-vm.sh`, который создаем VM на основе ранее созданного `bake-образа`.
+
+
+# HW #6
+
+1. Импорт ключа сервисного аккаунта:
+```
+yc iam key create \
+  --service-account-id `id-sa` \
+  --folder-name `название каталога` \
+  --output key.json
+```
+2. Создание профиля сервисного аккаунта:
+```
+yc config profile create `имя_профиля`
+```
+3. Конфигурация профиля:
+```
+yc config set service-account-key `key.json`
+yc config set cloud-id `идентификатор_облака`
+yc config set folder-id `идентификатор_каталога`
+```
+4. Просмотр информации списка образов:
+```
+yc compute image list
+```
+5. Просмотр планируемых изменений:
+```
+terraform plan
+```
+6. Запуск формирования инстанса (флаг -auto-approve):
+```
+terraform aaply -auto-approve
+```
+7. Уничтожить инстанс:
+```
+terraform destroy
+```
+8. Маркировка инстанса для пересоздания при следующем применении изменений (terraform apply):
+```
+terraform taint yandex_compute_instance.app
+```
+9. Просмотр внешнего ip-адреса инстанса:
+```
+terraform show | grep nat_ip_address
+```
+10. Встроенная функция `file` - позволяет считывать содержимое файла в наш cfg:
+```
+"ubuntu:${file("")}"
+```
+11. Определение переменных:
+```
+image_id=$(yc compute image list | awk '! /ID/ {print $2}')
+cloud_id=$(yc config list | grep cloud-id | awk '{print $2}')
+folder_id=$(yc config list | grep folder-id | awk '{print $2}')
+subnet_id=$(yc vpc subnet get default-ru-central1-a | grep id | awk '{print $2}' | head -1)
+```
+12. Балансировщик yandex_cloud:
+```
+resource "yandex_lb_network_load_balancer" "foo" {
+```
