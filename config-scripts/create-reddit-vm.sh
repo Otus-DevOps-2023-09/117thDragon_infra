@@ -1,6 +1,6 @@
 #!/bin/sh
 
-folder_id=$(yc config list | grep folder-id | awk '{print $2}') # грепаем id-каталога
+folder_id=$(yc config list | grep folder-id | awk '{print $2}')
 
 yc compute instance create \
   --name reddit-app \
