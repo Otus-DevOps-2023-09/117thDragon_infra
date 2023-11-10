@@ -150,7 +150,6 @@ packer validate ubuntu16.json
 packer build ubuntu16.json
 ```
 7. Создано исключение файла `variables.json` для `git` в файле `./.gitignore`.
-
 ## Дополнительное задание:
 1. Создан шаблон `packer` `immutable.json`, который используется для создания `bake-образа`.
 2. Создан скрипт `create-reddit-vm.sh`, который создаем VM на основе ранее созданного `bake-образа`.
