@@ -1,11 +1,11 @@
-#terraform {
-#  required_providers {
-#    yandex = {
-#      source = "yandex-cloud/yandex"
-#    }
-#  }
-#  required_version = ">= 0.13"
-#}
+terraform {
+  required_providers {
+    yandex = {
+      source = "yandex-cloud/yandex"
+    }
+  }
+  required_version = ">= 0.13"
+}
 
 provider "yandex" {
   service_account_key_file = var.service_account_key_file
@@ -15,15 +15,15 @@ provider "yandex" {
 }
 
 resource "yandex_compute_instance" "app" {
-  count = var.instance_count
-  name = "reddit-app-${count.index + 1}"
-  zone = var.zone
+  count       = var.instance_count
+  name        = "reddit-app-${count.index + 1}"
+  zone        = var.zone
   platform_id = "standard-v3"
 
   resources {
     core_fraction = 20
-    cores  = 2
-    memory = 2
+    cores         = 2
+    memory        = 2
   }
 
   boot_disk {
