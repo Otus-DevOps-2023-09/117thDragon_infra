@@ -5,7 +5,7 @@
 # HW №3
 ```
 bastion_IP = 158.160.98.52
-someinternalhost_IP = 10.128.0.33
+someinternalhost_IP = 10.128.0.20
 ```
 ## Дополнительное задание №1
 1. Подключение к локальному серверу (`someinternalhost`) через сервер `Basion`:
