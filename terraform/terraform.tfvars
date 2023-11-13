@@ -1,8 +1,0 @@
-cloud_id                 = "b1g0pi5g5inulu013ia8"
-folder_id                = "b1g9rbhfq6ba8dfpgv37"
-zone                     = "ru-central1-a"
-image_id                 = "fd8f15q8s83j71oousqk"
-public_key_path          = "~/.ssh/yc.pub"
-privat_key_path          = "~/.ssh/yc"
-subnet_id                = "e9bmh97l31novt99ndqb"
-service_account_key_file = "/home/admins/otus/secrets/sa-terraform-key.json"
