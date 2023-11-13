@@ -1,13 +1,7 @@
 # 117thDragon_infra
 117thDragon Infra repository
 
-<<<<<<< HEAD
 =======
-###HW №3###
-bastion_IP = 158.160.98.52
-someinternalhost_IP = 10.128.0.33
->>>>>>> 34dd654 (correct)
-
 # HW №3
 ```
 bastion_IP = 158.160.98.52
