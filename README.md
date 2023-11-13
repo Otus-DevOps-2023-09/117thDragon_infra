@@ -1,6 +1,12 @@
 # 117thDragon_infra
 117thDragon Infra repository
 
+<<<<<<< HEAD
+=======
+###HW №3###
+bastion_IP = 158.160.98.52
+someinternalhost_IP = 10.128.0.33
+>>>>>>> 34dd654 (correct)
 
 # HW №3
 ```
@@ -45,6 +51,7 @@ ssh someinternalhost
 curl -vvv bastion.<ip>.nip.io
 ```
 5. Далее в панели управления `Pritunl` переходи в раздел `Settings` и вносим в поле `Lets Encrypt Domain` ранее зарегистрированное DN, после чего созраняем настройку. Сертификат будет выпущен и автоматически установлен для работы для работы web-интерфейса по протоколу `https`. `p.s`. На момент выполнения работы, сервер `Let's Encrypt` отказывался выпускать сертификат по причине: `Error creating new order :: too many certificates already issued for \"nip.io\`.
+<<<<<<< HEAD
 
 
 # HW №4
@@ -220,3 +227,5 @@ subnet_id=$(yc vpc subnet get default-ru-central1-a | grep id | awk '{print $2}'
 ```
 resource "yandex_lb_network_load_balancer" "foo" {
 ```
+=======
+>>>>>>> 678a18d (Update README.md)
