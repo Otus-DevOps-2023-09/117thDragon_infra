@@ -1,11 +1,11 @@
 # 117thDragon_infra
 117thDragon Infra repository
 
-
+=======
 # HW №3
 ```
-bastion_IP = 158.160.127.176
-someinternalhost_IP = 10.128.0.19
+bastion_IP = 158.160.98.52
+someinternalhost_IP = 10.128.0.20
 ```
 ## Дополнительное задание №1
 1. Подключение к локальному серверу (`someinternalhost`) через сервер `Basion`:
@@ -30,8 +30,11 @@ Host someinternalhost
 ```
 ssh -J bastion someinternalhost
 or
-ssh someinternalhost
+ssh someinternalhost cloud-bastion
 ```
+##Дополнительное задание №2
+#Использование сервиса nip.io и встроенного в "Pritunl" Let's Encrypt
+
 ## Дополнительное задание №2
 4. Использование сервиса `npo.io` и встроенного в `Pritunl` Let's Encrypt. Регистрируем запись в `npo.io`:
 ```
